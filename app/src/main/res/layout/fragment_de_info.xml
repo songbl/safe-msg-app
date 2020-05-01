@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:background="@drawable/shape"
+        app:title="加密解密"
+        app:titleTextColor="@android:color/white" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_symmetry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_recharge"
+                android:text="对称解密"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="8dp"
+                android:textSize="@dimen/dp18"/>
+            <Button
+                android:id="@+id/btn_no_symmetry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_btn_recharge"
+                android:text="非对称解密"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:textSize="@dimen/dp18"/>
+
+            <LinearLayout
+                android:id="@+id/ll_no_symmetry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white_background"
+                    >
+                    <EditText
+                        android:id="@+id/et_no_de"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:hint="请输入要解密的内容-非对称加密"
+                        android:textSize="@dimen/dp18"
+                        android:textColor="@color/bg_66"
+                        android:background="@drawable/bg_blue_stroke"
+                        android:gravity="left|top"
+                        android:padding="2dp"
+                        android:layout_marginLeft="16dp"
+
+                        android:layout_marginRight="16dp"
+                        />
+                    <EditText
+                        android:id="@+id/et_phone_num"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                       app:layout_constraintTop_toBottomOf="@+id/et_no_de"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:hint="请输入发送方手机号码"
+                        android:textSize="@dimen/dp18"
+                        android:textColor="@color/bg_66"
+                        android:background="@drawable/bg_blue_stroke"
+                        android:gravity="left|top"
+                        android:padding="6dp"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginTop="8dp"
+                        android:inputType="phone"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="16dp"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/btn_no_de"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn_recharge"
+                    android:text="解密"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="@dimen/dp24"
+                    android:textSize="@dimen/dp18"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_symmetry"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="24dp"
+                android:visibility="gone"
+                >
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:background="@color/white_background"
+                    >
+                    <EditText
+                        android:id="@+id/et_de"
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        android:hint="请输入要解密的内容-对称"
+                        android:textSize="@dimen/dp18"
+                        android:textColor="@color/bg_66"
+                        android:background="@drawable/bg_blue_stroke"
+                        android:gravity="left|top"
+                        android:padding="2dp"
+                        android:layout_marginLeft="16dp"
+                        app:layout_constraintRight_toRightOf="parent"
+                        android:layout_marginRight="16dp"
+                        />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <Button
+                    android:id="@+id/btn_symmetry_de"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn_recharge"
+                    android:text="解密"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="@dimen/dp24"
+                    android:textSize="@dimen/dp18"/>
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+
+
+</LinearLayout>
